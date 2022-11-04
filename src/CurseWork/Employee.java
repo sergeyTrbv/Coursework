@@ -3,35 +3,38 @@ package CurseWork;
 import java.util.Objects;
 
 public class Employee {
-private final String fullName;
-private int salary;
-private  String departament;
-private static int counter;
-private int id;
-    public Employee(String fullName, int salary, String departament){
-    this.fullName = fullName;
-    this.salary = salary;
-    this.departament = departament;
-    id = counter ++;
-}
+    private final String fullName;
+    private int salary;
+    private String departament;
+    private static int counter;
+    private int id;
 
-public String getFullName(){
-    return this.fullName;
-}
-public int getSalary(){
-    return this.salary;
-}
-public void setSalary(int salary){
-    this.salary = salary;
-}
+    public Employee(String fullName, int salary, String departament) {
+        this.fullName = fullName;
+        this.salary = salary;
+        this.departament = departament;
+        id = counter++;
+    }
 
-public String getDepartament(){
+    public String getFullName() {
+        return this.fullName;
+    }
+
+    public int getSalary() {
+        return this.salary;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
+    public String getDepartament() {
         return this.departament;
-}
+    }
 
-public String toString(){
-    return "Ф.И.О: " + getFullName() + ". Зарплата: "+ getSalary()+ " ₽" + ". Отдел: " + departament + ". ID сотрудника: " + id;
-}
+    public String toString() {
+        return "Ф.И.О: " + getFullName() + ". Зарплата: " + getSalary() + " ₽" + ". Отдел: " + departament + ". ID сотрудника: " + id;
+    }
 
     @Override
     public boolean equals(Object o) {
